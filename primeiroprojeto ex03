@@ -1,3 +1,7 @@
+/*Crie um programa que simule o lançamento de um dado 100 vezes. Conte e exiba a
+quantidade de vezes que cada face do dado foi sorteada. Você deve usar um `for`
+para os lançamentos e estrutura de switch para somar cada quantidade.*/
+
 import java.lang.Math;
 public class Ex03 {
     public static void main(String[] args){
