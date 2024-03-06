@@ -13,19 +13,19 @@ public class Ex04 {
         while(ope != 5){
             switch(ope){
                 case 1:
-                    System.out.println(soma());
+                    soma();
                     break;
 
                 case 2:
-                    System.out.println(menos());
+                    menos();
                     break;
 
                 case 3:
-                    System.out.println(vezes());
+                    vezes();
                     break;
 
                 case 4:
-                    System.out.println(div());
+                    div();
                     break;
 
                 default:
@@ -37,6 +37,7 @@ public class Ex04 {
             System.out.println("3: Multiplicação");
             System.out.println("4: Divisão");
             System.out.println("5: SAIR");
+            System.out.println();
             System.out.print("Escolha a operação: ");
             ope = input.nextInt();
        }
