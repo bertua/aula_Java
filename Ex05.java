@@ -1,3 +1,6 @@
+/*Escreva um programa que solicite ao usuário que insira as 4 notas de um aluno em
+cinco disciplinas diferentes. Armazene essas notas em um vetor e, em seguida, calcule
+e exiba a média das notas de cada disciplina.*/
 import java.util.Scanner;
 import java.util.ArrayList;
 public class Ex05 {
