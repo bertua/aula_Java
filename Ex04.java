@@ -1,3 +1,9 @@
+/*Desenvolva um pequeno sistema Java, operado via console, que ofereça quatro
+funcionalidades básicas: soma, divisão, multiplicação e subtração. O sistema deverá
+solicitar ao usuário que escolha uma das funções disponíveis e, em seguida, a função
+selecionada deverá pedir os números necessários para realizar a operação e exibir o
+resultado. O sistema continuará a solicitar operações até que o usuário decida sair,
+digitando a palavra "SAIR".*/
 import java.util.Scanner;
 public class Ex04 {
     public static void main(String[] args){
