@@ -1,66 +1,68 @@
 import java.util.Scanner;
-public class Ex05 {
+public class Ex04 {
     public static void main(String[] args){
         Scanner input = new Scanner(System.in);
-        double[] matematica = new double[4];
-        double[] portugues = new double[4];
-        double[] fisica = new double[4];
-        double[] quimica = new double[4];
-        double[] sociologia = new double[4];
-        
-        String[] materias = {"Matematica", "Portugues", "Fisica", "Quimica", "Sociologia"};
-        
-        for(int i = 0; i < 5; i++){
-            System.out.println("Notas dispciplina: " + materias[i]);
-            if(i == 0){
-                for(int j = 1; j <= 4; j++){
-                    System.out.print("Nota " + j + ": ");
-                    double nota = input.nextDouble();
-                    matematica[j-1] = nota;
+        System.out.println("1: Soma");
+        System.out.println("2: Subtração");
+        System.out.println("3: Multiplicação");
+        System.out.println("4: Divisão");
+        System.out.println("5: SAIR");
+        System.out.print("Escolha a operação: ");
+        int ope = input.nextInt();
+        System.out.print("Primeiro número: ");
+        double a = input.nextInt();
+        System.out.print("Segundo número: ");
+        double b = input.nextInt();
+
+        while(ope != 5){
+            switch(ope){
+                case 1:
+                System.out.println(soma(a,b));
+                break;
+
+                case 2:
+                System.out.println(menos(a,b));
+                break;
+
+                case 3:
+                System.out.println(vezes(a,b));
+                break;
+
+                case 4:
+                if(b == 0){
+                    System.out.println("ERROR");
+                } else {
+                    System.out.println(div(a,b));
                 }
-                System.out.println(media(matematica));
+                break;
+
+                default:
+                System.out.println("Número incorreto");
             }
-            else if(i == 1){
-                for(int j = 1; j <= 4; j++){
-                    System.out.print("Nota " + j + ": ");
-                    double nota = input.nextDouble();
-                    portugues[j-1] = nota;
-                }
-                System.out.println(media(portugues));
+            
+            System.out.print("Escolha a operação: ");
+            ope = input.nextInt();
+            if(ope == 5){
+                break;
             }
-            else if(i == 2){
-                for(int j = 1; j <= 4; j++){
-                    System.out.print("Nota " + j + ": ");
-                    double nota = input.nextDouble();
-                    fisica[j-1] = nota;
-                }
-                System.out.println(media(fisica));
-            }
-            else if(i == 3){
-                for(int j = 1; j <= 4; j++){
-                    System.out.print("Nota " + j + ": ");
-                    double nota = input.nextDouble();
-                    quimica[j-1] = nota;
-                }
-                System.out.println(media(quimica));
-            }
-            else if(i == 4){
-                for(int j = 1; j <= 4; j++){
-                    System.out.print("Nota " + j + ": ");
-                    double nota = input.nextDouble();
-                    sociologia[j-1] = nota;
-                }
-                System.out.println(media(sociologia));
-            }
-        } 
+            System.out.print("Primeiro número: ");
+            a = input.nextInt();
+            System.out.print("Segundo número: ");
+            b = input.nextInt();
+       }
     }
-    
-    public static double media(double[] collection){
-        double soma = 0;
-        for(double item : collection){
-            soma += item;
-        }
-        return soma/collection.length;
+
+    public static double soma(double a, double b){
+        return a + b;
+    }
+    public static double menos(double a, double b){
+        return a - b;
+    }
+    public static double vezes(double a, double b){
+        return a * b;
+    }
+    public static double div(double a, double b){
+        return a / b;
     }
 
 }
