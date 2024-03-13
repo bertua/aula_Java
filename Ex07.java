@@ -27,6 +27,7 @@ public class Ex07 {
         double faixa1 = 1412.00 * 0.075;
         double faixa2 = (2666.68 - 1412.00) * 0.09;
         double faixa3 = (4000.03 - 2666.68) * 0.12;
+        double faixa4 = (7786.02 - 4000.03) * 0.14
         if(salarioM <= 1412.00){
             total = salarioM * 0.075;
         } else if (salarioM > 1412.00 && salarioM <= 2666.68){
@@ -36,7 +37,7 @@ public class Ex07 {
         } else if (salarioM > 4000.04 && salarioM <= 7786.02){
             total = faixa1 + faixa2 + faixa3 + (salarioM - 4000.03) * 0.14;
         } else {
-            total = faixa1 + faixa2 + faixa3 + (7786.02 - 4000.03) * 0.14;
+            total = faixa1 + faixa2 + faixa3 + faixa4;
         }
         System.out.println("INSS: " + total);
         
