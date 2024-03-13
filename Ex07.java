@@ -24,16 +24,19 @@ public class Ex07 {
         System.out.println("Salario mensal: " + salarioM);
 
         double total = 0;
+        double faixa1 = 1412.00 * 0.075;
+        double faixa2 = (2666.68 - 1412.00) * 0.09;
+        double faixa3 = (4000.03 - 2666.68) * 0.12;
         if(salarioM <= 1412.00){
             total = salarioM * 0.075;
         } else if (salarioM > 1412.00 && salarioM <= 2666.68){
-            total = 1412.00 * 0.075 + (salarioM - 1412.00) * 0.09; 
+            total = faixa1 + (salarioM - 1412.00) * 0.09; 
         } else if (salarioM > 2666.68 && salarioM <= 4000.03){
-            total = 1412.00 * 0.075 + (2666.68 - 1412.00) * 0.09 + (salarioM - 2666.68) * 0.12;
+            total = faixa1 + faixa2 + (salarioM - 2666.68) * 0.12;
         } else if (salarioM > 4000.04 && salarioM <= 7786.02){
-            total = 1412.00 * 0.075 + (2666.68 - 1412.00) * 0.09 + (4000.03 - 2666.68) * 0.12 + (salarioM - 4000.03) * 0.14;
+            total = faixa1 + faixa2 + faixa3 + (salarioM - 4000.03) * 0.14;
         } else {
-            total = 1412.00 * 0.075 + (2666.68 - 1412.00) * 0.09 + (4000.03 - 2666.68) * 0.12 + (7786.02 - 4000.03) * 0.14;
+            total = faixa1 + faixa2 + faixa3 + (7786.02 - 4000.03) * 0.14;
         }
         System.out.println("INSS: " + total);
         
